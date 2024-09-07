@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <!-- Meta Tags for SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مرحبًا بكم في مطعمنا ، حيث نقدم أطباقًا لذيذة وطازجة. زورونا لتجربة تناول طعام لا تُنسى.">
+    <meta name="keywords" content="مطعم, طعام, أطباق, مأكولات, وجبات, طازجة, لذيذة">
+    <meta name="author" content="yasoo">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+    <!-- CSS Libraries from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- Pace.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <title>مطعم</title>
+</head>
+
+<body>
+    <!-- Loading screen -->
+    <div id="loading-screen">
+        <div class="corner-indicator"></div>
+    </div>
+    <main>
+        <!-- Header Section -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!-- Toggle Button for Mobile Menu -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل"> <span class="navbar-toggler-icon"></span> </button>
+                    <!-- Navbar Menu -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"> <a class="nav-link active" href="index.html"><i class="fa fa-home me-2"></i>الرئيسية</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="about.html"><i class="fa fa-info-circle me-2"></i>من نحن</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="reviews.html"><i class="fa fa-comments me-2"></i>الأراء</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="menu.html"><i class="fa fa-utensils me-2"></i>القائمة</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="reservation.html"><i class="fa fa-calendar-check me-2"></i>الحجز</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="contact.html"><i class="fa fa-envelope me-2"></i>اتصل بنا</a> </li>
+                        </ul>
+                        <!-- Header Buttons -->
+                        <div class="d-flex"> <a href="reservation.html" class="btn btn-primary me-2"><i class="fa fa-calendar-plus me-2"></i>احجز طاولة</a> <a class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#menuModal"><i class="fa fa-list me-2"></i>القائمة</a> </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Menu Modal -->
+            <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="menuModalLabel">قائمة الطعام</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">الطبق</th>
+                                            <th scope="col">الوصف</th>
+                                            <th scope="col">السعر</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>طبق 1</td>
+                                            <td>وصف طبق 1</td>
+                                            <td>$12.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>طبق 2</td>
+                                            <td>وصف طبق 2</td>
+                                            <td>$15.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>طبق 3</td>
+                                            <td>وصف طبق 3</td>
+                                            <td>$18.99</td>
+                                        </tr>
+                                        <!-- Add more rows as needed -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer"> <a href="tel:+123456789" class="btn btn-primary w-100">اطلب الآن</a>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- قسم الحجز -->
+        <section class="res-hero py-5 text-center" style="background-image: url('assets/images/table.jpg'); background-size: cover; background-position: center;">
+            <div class="container">
+                <h1 class="res-hero-title text-white">احجز طاولتك الآن</h1>
+                <p class="res-hero-subtitle text-white">استمتع بأفضل تجربة طعام مع قائمتنا الرائعة وخدمتنا الاستثنائية. احجز طاولتك اليوم!</p> <a href="#reservation-form" class="btn btn-light res-hero-btn">احجز الآن <i class="fa-solid fa-calendar-check"></i></a> </div>
+        </section>
+        <!-- قسم نموذج الحجز -->
+        <section class="res-form py-5">
+            <div class="container">
+                <div class="row text-center mb-4">
+                    <div class="col-12">
+                        <h2 class="res-form-title">إجراء الحجز</h2>
+                        <p class="res-form-subtitle">املأ النموذج أدناه لحجز طاولتك. نتطلع لخدمتك!</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <form id="reservationForm" action="#" method="post" class="res-form-form">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">الاسم الكامل</label>
+                                    <input type="text" id="name" name="name" class="form-control" required> </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">عنوان البريد الإلكتروني</label>
+                                    <input type="email" id="email" name="email" class="form-control" required> </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">رقم الهاتف</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" required> </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="date" class="form-label">تاريخ الحجز</label>
+                                    <input type="date" id="date" name="date" class="form-control" required> </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="time" class="form-label">وقت الحجز</label>
+                                    <input type="time" id="time" name="time" class="form-control" required> </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="guests" class="form-label">عدد الضيوف</label>
+                                    <input type="number" id="guests" name="guests" class="form-control" required> </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="message" class="form-label">طلبات خاصة أو ملاحظات</label>
+                                    <textarea id="message" name="message" class="form-control" rows="4"></textarea>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary res-form-btn" data-bs-toggle="modal" data-bs-target="#bookingModal">إرسال الحجز <i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="bookingModalLabel">تفاصيل الحجز</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p><strong>الاسم الكامل:</strong> <span id="modalName"></span></p>
+                                <p><strong>عنوان البريد الإلكتروني:</strong> <span id="modalEmail"></span></p>
+                                <p><strong>رقم الهاتف:</strong> <span id="modalPhone"></span></p>
+                                <p><strong>تاريخ الحجز:</strong> <span id="modalDate"></span></p>
+                                <p><strong>وقت الحجز:</strong> <span id="modalTime"></span></p>
+                                <p><strong>عدد الضيوف:</strong> <span id="modalGuests"></span></p>
+                                <p><strong>طلبات خاصة أو ملاحظات:</strong> <span id="modalMessage"></span></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                                <button type="submit" class="btn btn-primary" id="confirmBooking">تأكيد الحجز</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- restaurant information section -->
+        <section class="res-info py-5">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-4 mb-4">
+                        <div class="res-info-box">
+                            <div class="res-info-icon"> <i class="fa-solid fa-location-dot"></i> </div>
+                            <h3 class="res-info-heading">موقعنا</h3>
+                            <p class="res-info-text">1234 شارع المروج، مدينة فيل، ST 12345</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="res-info-box">
+                            <div class="res-info-icon"> <i class="fa-solid fa-phone"></i> </div>
+                            <h3 class="res-info-heading">تواصل معنا</h3>
+                            <p class="res-info-text">الهاتف: (123) 456-7890</p>
+                            <p class="res-info-text">البريد الإلكتروني: info@restaurant.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="res-info-box">
+                            <div class="res-info-icon"> <i class="fa-solid fa-clock"></i> </div>
+                            <h3 class="res-info-heading">ساعات العمل</h3>
+                            <p class="res-info-text">الإثنين - الجمعة: 10:00 صباحًا - 10:00 مساءً</p>
+                            <p class="res-info-text">السبت - الأحد: 11:00 صباحًا - 11:00 مساءً</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Social Media Section -->
+        <section id="home-social-media" class="home-social-media">
+            <div class="container text-center">
+                <h2 class="home-title">تابعنا على وسائل التواصل الاجتماعي</h2>
+                <p class="home-subtitle">ابق على اطلاع بآخر التحديثات والعروض الخاصة</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook" aria-label="Facebook"> <i class="fab fa-facebook-f"></i> </a>
+                    <a href="#" class="social-icon twitter" aria-label="Twitter"> <i class="fab fa-twitter"></i> </a>
+                    <a href="#" class="social-icon instagram" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a>
+                    <a href="#" class="social-icon linkedin" aria-label="LinkedIn"> <i class="fab fa-linkedin-in"></i> </a>
+                    <a href="#" class="social-icon youtube" aria-label="YouTube"> <i class="fab fa-youtube"></i> </a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer Section -->
+        <footer id="home-footer" class="home-footer">
+            <div class="container text-center">
+                <div class="footer-top">
+                    <h2 class="footer-title">اتصل بنا</h2>
+                    <p class="footer-description">إذا كان لديك أي أسئلة أو استفسارات، لا تتردد في الاتصال بنا</p>
+                    <ul class="footer-contact-info">
+                        <li><i class="fas fa-phone-alt"></i> +123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@example.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, Anytown, USA</li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-logo"> <img src="assets/images/logo.png" alt="Restaurant Logo"> </div>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">الصفحة الرئيسية</a></li>
+                        <li><a href="menu.html">القائمة</a></li>
+                        <li><a href="about.html">عن المطعم</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon facebook" aria-label="Facebook"> <i class="fab fa-facebook-f"></i> </a>
+                        <a href="#" class="social-icon twitter" aria-label="Twitter"> <i class="fab fa-twitter"></i> </a>
+                        <a href="#" class="social-icon instagram" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a>
+                        <a href="#" class="social-icon linkedin" aria-label="LinkedIn"> <i class="fab fa-linkedin-in"></i> </a>
+                        <a href="#" class="social-icon youtube" aria-label="YouTube"> <i class="fab fa-youtube"></i> </a>
+                    </div>
+                    <p class="footer-copy">&copy; 2024 اسم المطعم. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <!-- JS Libraries-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Slick Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Pace.js Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

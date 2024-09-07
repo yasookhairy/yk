@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <!-- Meta Tags for SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مرحبًا بكم في مطعمنا ، حيث نقدم أطباقًا لذيذة وطازجة. زورونا لتجربة تناول طعام لا تُنسى.">
+    <meta name="keywords" content="مطعم, طعام, أطباق, مأكولات, وجبات, طازجة, لذيذة">
+    <meta name="author" content="yasoo">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+    <!-- CSS Libraries from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- Pace.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <title>مطعم</title>
+</head>
+
+<body>
+    <!--  Loading screen -->
+    <div id="loading-screen">
+        <div class="corner-indicator"></div>
+    </div>
+    <main>
+        <!-- Header Section -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!-- Toggle Button for Mobile Menu -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل"> <span class="navbar-toggler-icon"></span> </button>
+                    <!-- Navbar Menu -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"> <a class="nav-link active" href="index.html"><i class="fa fa-home me-2"></i>الرئيسية</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="about.html"><i class="fa fa-info-circle me-2"></i>من نحن</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="reviews.html"><i class="fa fa-comments me-2"></i>الأراء</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="menu.html"><i class="fa fa-utensils me-2"></i>القائمة</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="reservation.html"><i class="fa fa-calendar-check me-2"></i>الحجز</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="contact.html"><i class="fa fa-envelope me-2"></i>اتصل بنا</a> </li>
+                        </ul>
+                        <!-- Header Buttons -->
+                        <div class="d-flex"> <a href="reservation.html" class="btn btn-primary me-2"><i class="fa fa-calendar-plus me-2"></i>احجز طاولة</a> <a class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#menuModal"><i class="fa fa-list me-2"></i>القائمة</a> </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Menu Modal -->
+            <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="menuModalLabel">قائمة الطعام</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">الطبق</th>
+                                            <th scope="col">الوصف</th>
+                                            <th scope="col">السعر</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>طبق 1</td>
+                                            <td>وصف طبق 1</td>
+                                            <td>$12.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>طبق 2</td>
+                                            <td>وصف طبق 2</td>
+                                            <td>$15.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>طبق 3</td>
+                                            <td>وصف طبق 3</td>
+                                            <td>$18.99</td>
+                                        </tr>
+                                        <!-- Add more rows as needed -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer"> <a href="tel:+123456789" class="btn btn-primary w-100">اطلب الآن</a>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Reviews Hero Section -->
+        <section class="rev-hero py-5" style="background-image: url('assets/images/reviews-bg.png');">
+            <div class="container text-center text-white">
+                <h1 class="rev-hero-title">آراء الزوار</h1>
+                <p class="rev-hero-subtitle">اكتشف آراء عملائنا واستفد من تجاربهم معنا.</p>
+            </div>
+        </section>
+        <!-- قسم تقديم المراجعات -->
+        <section class="rev-submission-form py-5">
+            <div class="container text-center">
+                <h2 class="rev-form-title">أرسل مراجعتك</h2>
+                <p class="rev-form-subtitle">شاركنا رأيك حول تجربتك مع خدماتنا، ونحن نقدر ملاحظاتك.</p>
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="input-group"> <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <input type="text" class="form-control" placeholder="الاسم الكامل" required> </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="input-group"> <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                <input type="email" class="form-control" placeholder="البريد الإلكتروني" required> </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="input-group"> <span class="input-group-text"><i class="fas fa-star"></i></span>
+                                <select class="form-select" required>
+                                    <option value="" disabled selected>تقييم الخدمة</option>
+                                    <option value="1">1 - سيء جداً</option>
+                                    <option value="2">2 - سيء</option>
+                                    <option value="3">3 - متوسط</option>
+                                    <option value="4">4 - جيد</option>
+                                    <option value="5">5 - ممتاز</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-4">
+                            <div class="input-group"> <span class="input-group-text"><i class="fas fa-comment"></i></span>
+                                <textarea class="form-control" rows="4" placeholder="اكتب مراجعتك هنا" required></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-primary">إرسال</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- Reviews Section -->
+        <section class="rev-reviews py-5">
+            <div class="container">
+                <div class="row text-center mb-4">
+                    <div class="col-12">
+                        <h2 class="rev-reviews-title">Read Our Customer Reviews</h2>
+                        <p class="rev-reviews-subtitle">See what our customers have to say about their experience with us.</p>
+                    </div>
+                </div>
+                <!-- Filter / Sort Options -->
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <div class="btn-group" role="group" aria-label="Filter / Sort Options">
+                            <button type="button" class="btn btn-primary">Newest Reviews</button>
+                            <button type="button" class="btn btn-primary">Top Reviews</button>
+                            <button type="button" class="btn btn-primary">Highest Ratings</button>
+                            <button type="button" class="btn btn-primary">Lowest Ratings</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Reviews List -->
+                <div class="row">
+                    <!-- Review Item 1 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="review-rating mb-2"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-alt"></i> </div>
+                                <h5 class="card-title">Great Service!</h5>
+                                <p class="card-text">I had an amazing experience. The service was excellent and the staff was friendly.</p>
+                                <p class="card-date">Posted on: August 15, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review Item 2 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="review-rating mb-2"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                                <h5 class="card-title">Excellent!</h5>
+                                <p class="card-text">The quality of the product exceeded my expectations. Highly recommend!</p>
+                                <p class="card-date">Posted on: August 10, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review Item 3 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="review-rating mb-2"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                                <h5 class="card-title">Very Satisfied</h5>
+                                <p class="card-text">The service was fast and the product was just as described. Very satisfied with my purchase.</p>
+                                <p class="card-date">Posted on: August 5, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="row">
+                    <div class="col-12 text-center mt-4">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled"> <span class="page-link">Previous</span> </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"> <a class="page-link" href="#">Next</a> </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- قسم إحصائيات التقييمات -->
+        <section class="rev-stats py-5">
+            <div class="container">
+                <div class="row text-center mb-4">
+                    <div class="col-12">
+                        <h2 class="rev-stats-title">إحصائيات التقييمات</h2>
+                        <p class="rev-stats-subtitle">احصل على نظرة عامة حول تقييمات عملائنا.</p>
+                    </div>
+                </div>
+                <!-- نظرة عامة على الإحصائيات -->
+                <div class="row">
+                    <!-- التقييم المتوسط -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="stat-card text-center">
+                            <div class="stat-icon mb-3"> <i class="fa fa-star fa-3x"></i> </div>
+                            <h3 class="stat-value">4.5</h3>
+                            <p class="stat-label">التقييم المتوسط</p>
+                        </div>
+                    </div>
+                    <!-- إجمالي التقييمات -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="stat-card text-center">
+                            <div class="stat-icon mb-3"> <i class="fa fa-comments fa-3x"></i> </div>
+                            <h3 class="stat-value">1,234</h3>
+                            <p class="stat-label">إجمالي التقييمات</p>
+                        </div>
+                    </div>
+                    <!-- التقييمات الإيجابية -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="stat-card text-center">
+                            <div class="stat-icon mb-3"> <i class="fa fa-thumbs-up fa-3x"></i> </div>
+                            <h3 class="stat-value">89%</h3>
+                            <p class="stat-label">التقييمات الإيجابية</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- توزيع التقييمات -->
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <h4 class="text-center mb-3">توزيع التقييمات</h4>
+                        <div class="d-flex justify-content-center">
+                            <div class="rating-distribution">
+                                <div class="rating-bar" style="width: 80%; background-color: #4caf50;"> <span>5 نجوم</span> </div>
+                                <div class="rating-bar" style="width: 60%; background-color: #8bc34a;"> <span>4 نجوم</span> </div>
+                                <div class="rating-bar" style="width: 40%; background-color: #cddc39;"> <span>3 نجوم</span> </div>
+                                <div class="rating-bar" style="width: 20%; background-color: #ffeb3b;"> <span>2 نجوم</span> </div>
+                                <div class="rating-bar" style="width: 10%; background-color: #ff5722;"> <span>نجمة واحدة</span> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Social Media Section -->
+        <section id="home-social-media" class="home-social-media">
+            <div class="container text-center">
+                <h2 class="home-title">تابعنا على وسائل التواصل الاجتماعي</h2>
+                <p class="home-subtitle">ابق على اطلاع بآخر التحديثات والعروض الخاصة</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook" aria-label="Facebook"> <i class="fab fa-facebook-f"></i> </a>
+                    <a href="#" class="social-icon twitter" aria-label="Twitter"> <i class="fab fa-twitter"></i> </a>
+                    <a href="#" class="social-icon instagram" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a>
+                    <a href="#" class="social-icon linkedin" aria-label="LinkedIn"> <i class="fab fa-linkedin-in"></i> </a>
+                    <a href="#" class="social-icon youtube" aria-label="YouTube"> <i class="fab fa-youtube"></i> </a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer Section -->
+        <footer id="home-footer" class="home-footer">
+            <div class="container text-center">
+                <div class="footer-top">
+                    <h2 class="footer-title">اتصل بنا</h2>
+                    <p class="footer-description">إذا كان لديك أي أسئلة أو استفسارات، لا تتردد في الاتصال بنا</p>
+                    <ul class="footer-contact-info">
+                        <li><i class="fas fa-phone-alt"></i> +123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@example.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, Anytown, USA</li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-logo"> <img src="assets/images/logo.png" alt="Restaurant Logo"> </div>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">الصفحة الرئيسية</a></li>
+                        <li><a href="menu.html">القائمة</a></li>
+                        <li><a href="about.html">عن المطعم</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon facebook" aria-label="Facebook"> <i class="fab fa-facebook-f"></i> </a>
+                        <a href="#" class="social-icon twitter" aria-label="Twitter"> <i class="fab fa-twitter"></i> </a>
+                        <a href="#" class="social-icon instagram" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a>
+                        <a href="#" class="social-icon linkedin" aria-label="LinkedIn"> <i class="fab fa-linkedin-in"></i> </a>
+                        <a href="#" class="social-icon youtube" aria-label="YouTube"> <i class="fab fa-youtube"></i> </a>
+                    </div>
+                    <p class="footer-copy">&copy; 2024 اسم المطعم. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <!-- JS Libraries  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Slick Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Pace.js Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

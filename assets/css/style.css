@@ -1,0 +1,1911 @@
+/* ====================================================================
+
+    تفاصيل القالب
+    --------------------------------
+
+     Restaurant : اسم القالب
+     Yasoo : اسم المؤلف
+     1.0.0 : الإصدار 
+     تاريخ الإنشاء : 1/8/2024
+    الوصف: ملف التنسيق الرئيسي للنسخة العربية من قالب المطعم 
+
+==================================================================== */
+
+
+/* Basic Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* HTML5 Display Role Reset */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+
+/* Body and Typography */
+
+body {
+    direction: rtl;
+    line-height: 1.6;
+    font-family: 'Cairo', sans-serif;
+    /* Applied font-family for Arabic version */
+}
+
+
+/* Lists */
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+/* heading */
+
+h2 {
+    font-size: 2.5rem !important;
+}
+
+
+/* Links */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Images */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Tables */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* Forms */
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+/* Form Elements */
+
+input,
+button,
+textarea,
+select {
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3),
+.input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-control,
+.input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-select,
+.input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+    align-self: stretch
+}
+
+
+/* General Box Sizing */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* ==================================
+      loading screen Styling  
+================================== */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#loading-screen h1 {
+    font-family: "Roperto", sans-serif;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 100px;
+}
+.pace .pace-progress {
+    background: #ff5733;
+}
+
+.pace .pace-activity {
+    border-top-color: #ff5733;
+}
+
+main {
+    display: none;
+}
+
+.pace .pace-activity {
+    display: block;
+    position: fixed;
+    z-index: 2000;
+    width: 300px;
+    height: 300px;
+    left: 35%;
+    top: 15%
+}
+
+.pace .pace-activity::before,
+.pace .pace-activity::after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    display: block;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    content: '';
+}
+
+.pace .pace-activity::before {
+    margin-left: -40px;
+    width: 80px;
+    height: 80px;
+    border-right-color: #ff5733;
+    border-left-color: #ff5733;
+    -webkit-animation: pace-theme-corner-indicator-spin 3s linear infinite;
+    animation: pace-theme-corner-indicator-spin 3s linear infinite;
+}
+
+.pace .pace-activity::after {
+    bottom: 50px;
+    margin-left: -20px;
+    width: 40px;
+    height: 40px;
+    border-top-color: #ff5733;
+    border-bottom-color: #ff5733;
+    -webkit-animation: pace-theme-corner-indicator-spin 1s linear infinite;
+    animation: pace-theme-corner-indicator-spin 1s linear infinite;
+}
+
+@-webkit-keyframes pace-theme-corner-indicator-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+@keyframes pace-theme-corner-indicator-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+/* ==================================
+            Header Styling  
+================================== */
+header {
+    background-color: #fff;
+}
+
+.navbar {
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar-brand img {
+    max-height: 50px;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    padding: 14px 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+}
+
+.navbar-nav .nav-link i {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e74c3c;
+}
+
+.btn-primary {
+    background-color: #e74c3c;
+    border: none;
+}
+
+.btn-outline-secondary {
+    border-color: #3498db;
+    color: #3498db;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.btn i {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+/* Modal Styling for ( menu table ) */
+.modal-content {
+    border-radius: 0;
+}
+
+.table-responsive {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #fff;
+}
+
+*/
+
+@media (max-width: 767px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .btn-primary,
+    .btn-outline-secondary {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+
+/* ==================================
+        Hero Section Styling  
+================================== */
+
+.home-hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.home-hero .carousel-item {
+    height: 100vh;
+}
+
+.home-hero .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-caption {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0%;
+    right: 0%;
+    text-align: center;
+    background-color: rgba(0,0,0,.4);
+    flex-flow: column;
+    align-content: center;
+    align-items: center;
+}
+
+.home-title {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.home-subtitle {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.home-btn {
+    margin: 0.5rem;
+}
+
+.home-control-prev,
+.home-control-next {
+    filter: invert(1);
+    color: cyan;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: transparent!important;
+}
+
+
+/* ==================================
+        About Us Section Styling  
+================================== */
+
+.home-about {
+    background-color: #f8f9fa;
+}
+
+.home-about-icon {
+    margin-bottom: 1rem;
+}
+
+.home-about-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.home-about-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.home-about i {
+    color: #007bff;
+}
+
+
+/* ==================================
+    home-featured-menu Section Styling  
+================================== */
+
+
+
+.home-featured-menu {
+    background-color: #f0f4f8;
+}
+
+.home-featured-title {
+    font-size: 2rem;
+    color: #333;
+}
+
+.card {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    border-bottom: 1px solid #ddd;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* ==================================
+    Special Offers Section Styling  
+================================== */
+
+#home-special-offers {
+    background-color: #f8f9fa;
+}
+
+#home-special-offers .home-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+}
+
+#home-special-offers .home-subtitle {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 2rem;
+}
+
+.home-special-offer-card {
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.home-special-offer-card:hover {
+    transform: translateY(-10px);
+}
+
+.home-special-offer-card .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.home-special-offer-card .card-text {
+    font-size: 1.2rem;
+    color: #e74c3c;
+    margin-bottom: 1rem;
+}
+
+.home-special-offer-card .btn {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+}
+
+.home-special-offer-card .btn i {
+    margin-right: 0.5rem;
+}
+
+/* Modal Styling  for special offers section */
+
+.modal-title {
+    font-size: 1.75rem;
+    color: #333;
+}
+
+.home-offer-modal-description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.home-offer-modal-price {
+    font-size: 1.25rem;
+    color: #e74c3c;
+    margin-bottom: 1rem;
+}
+
+.modal-footer button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+/* ==================================
+        Delivery Section Styling  
+================================== */
+
+.home-delivery {
+    background: linear-gradient(to right, #004d40, #00796b);
+    overflow: hidden;
+}
+
+.home-delivery-icon {
+    margin-bottom: 1rem;
+}
+
+.home-delivery-title {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.home-delivery-text {
+    font-size: 1rem;
+    color: #e0f2f1;
+}
+
+.home-delivery i {
+    color: #faae02;
+    transform: rotatey(180deg);
+}
+
+.home-delivery ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.home-delivery ul li {
+    font-size: 1rem;
+    color: #e0f2f1;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.home-delivery ul li i {
+    margin-left: 0.75rem;
+}
+
+.home-delivery img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.home-delivery .btn {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    background-color: #004d40;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.home-delivery .btn i {
+    margin-right: 0.5rem;
+}
+
+.home-delivery .btn:hover {
+    background-color: #00251a;
+}
+
+
+/* ==================================
+        Upcoming-Events Section Styling  
+================================== */
+
+.home-upcoming-events {
+    background-color: #f5f5f5;
+    /* Light grey background for contrast */
+}
+
+.home-events-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    direction: rtl;
+}
+
+.home-events-subtitle {
+    font-size: 1.2rem;
+    color: #777;
+    direction: rtl;
+}
+
+.event-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.event-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.event-card-body {
+    padding: 1.5rem;
+    direction: rtl;
+}
+
+.event-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.event-date {
+    font-size: 1rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.event-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-primary i {
+    margin-right: 0.5rem;
+}
+
+
+/* ==================================
+        Gallery Section Styling  
+================================== */
+
+.home-gallery {
+    background-color: #e9ecef;
+    padding: 2rem 0;
+    color: #333;
+}
+
+.home-gallery .home-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.home-gallery .home-subtitle {
+    font-size: 1.25rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 12px;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay i {
+    font-size: 2.5rem;
+}
+
+/* Carousel customization for Gallery Section */
+
+#galleryCarousel {
+    margin-bottom: 2rem;
+}
+
+#galleryCarousel .carousel-item img {
+    border-radius: 12px;
+}
+
+/* Customizing the carousel control icons (arrows) */
+
+#galleryCarousel .carousel-control-prev-icon,
+#galleryCarousel .carousel-control-next-icon {
+    background-color: rgba(0, 123, 255, 0.7);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+#galleryCarousel .carousel-control-prev-icon:hover,
+#galleryCarousel .carousel-control-next-icon:hover {
+    background-color: #007bff;
+}
+
+
+/* Customizing the carousel indicators (dots) */
+
+#galleryCarousel .carousel-indicators [data-bs-target] {
+    background-color: #007bff;
+}
+
+#galleryCarousel .carousel-indicators .active {
+    background-color: #0056b3;
+}
+
+/* ==================================
+    Testimonials Section Styling  
+================================== */
+
+.home-testimonials {
+    background-color: #f8f9fa;
+}
+
+.home-testimonials .home-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.home-testimonials .home-subtitle {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 2rem;
+}
+
+.testimonial-item {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.testimonial-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.testimonial-position {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #007bff;
+    border-radius: 50%;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #007bff;
+}
+
+/* ==================================
+    Social-Media Section Styling  
+================================== */
+
+.home-social-media {
+    background-color: #007bff;
+    color: #fff;
+    padding: 3rem 0;
+}
+
+.home-social-media .home-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.home-social-media .home-subtitle {
+    font-size: 1.1rem;
+    color: #d3d3d3;
+    margin-bottom: 2rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-icon {
+    font-size: 2.5rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+
+.social-icon.facebook {
+    color: #3b5998;
+}
+
+.social-icon.twitter {
+    color: #1da1f2;
+}
+
+.social-icon.instagram {
+    color: #e1306c;
+}
+
+.social-icon.linkedin {
+    color: #0077b5;
+}
+
+.social-icon.youtube {
+    color: #ff0000;
+}
+
+.social-icon:hover {
+    color: #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ===============================================================================
+
+                            about page style
+                
+=============================================================================== */
+
+/* ==================================
+    hero Section Styling for [about Page]   
+================================== */
+
+.ab-hero {
+    background-image: url('../images/rest11.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: right;
+}
+
+.ab-hero-title {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.ab-hero-text {
+    font-size: 1rem;
+    color:wheat;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+/* ==================================
+    our story section Styling for [about Page]   
+================================== */
+
+.ab-story-mission {
+    background-color: #f8f9fa;
+}
+
+.ab-story-icon,
+.ab-mission-icon {
+    margin-bottom: 1rem;
+}
+
+.ab-story-title,
+.ab-mission-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.ab-story-text,
+.ab-mission-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.ab-values-list {
+    list-style: none;
+    padding: 0;
+}
+
+.ab-values-list li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.75rem;
+}
+
+.ab-values-list i {
+    color: #007bff;
+    margin-right: 0.5rem;
+}
+
+
+/* ==================================
+    chef team section Styling for [about Page]   
+================================== */
+
+.ab-chef-team {
+    background-color: #e9ecef;
+}
+
+.ab-chef-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.ab-chef-text {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 3rem;
+}
+
+.ab-chef-card {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ab-chef-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ab-chef-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.ab-chef-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.ab-chef-name {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.ab-chef-role {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.ab-chef-description {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+/* ==================================
+    call to action section Styling for [about Page]   
+================================== */
+
+.ab-call-to-action {
+    background-color: #6c757d;
+}
+
+.ab-call-to-action-title {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.ab-call-to-action-text {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.ab-call-to-action-btn {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.ab-call-to-action-btn i {
+    margin-left: 0.5rem;
+}
+
+.ab-call-to-action-btn:hover {
+    background-color: #ffffff;
+    color: #007bff;
+}
+
+
+/* ===============================================================================
+
+                            reservation page style
+                
+=============================================================================== */
+
+/* ==================================
+    reservation hero section Styling for [reservation Page]   
+================================== */
+
+.res-hero {
+    background-color: #007bff;
+    /* لون خلفية افتراضي */
+    color: #ffffff;
+}
+
+.res-hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.res-hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.res-hero-btn {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.res-hero-btn i {
+    margin-left: 0.5rem;
+}
+
+.res-hero-btn:hover {
+    background-color: #ffffff;
+    color: #007bff;
+}
+
+/* ==================================
+    reservation form Styling for [reservation Page]   
+================================== */
+.res-form {
+    background-color: #f8f9fa;
+}
+
+.res-form-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.res-form-subtitle {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 2rem;
+}
+
+.res-form-form .form-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.res-form-form .form-control {
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+}
+
+.res-form-form .btn-primary {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #ffffff;
+}
+
+.res-form-form .btn-primary i {
+    margin-left: 0.5rem;
+}
+
+.res-form-form .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+
+/* ==================================
+    restaurant information section Styling for [reservation Page]   
+================================== */
+.res-info {
+    background-color: #ffffff;
+}
+
+.res-info-box {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.res-info-box:nth-child(odd) {
+    background-color: #f1f3f5;
+}
+
+.res-info-box:nth-child(even) {
+    background-color: #e9ecef;
+}
+
+.res-info-box:hover {
+    background-color: #e0e0e0;
+}
+
+.res-info-icon {
+    color: #007bff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.res-info-title {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.res-info-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.res-info-heading {
+    font-size: 1.125rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.res-info-text {
+    font-size: 0.875rem;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+
+/* ===============================================================================
+
+                            menu page style
+                
+=============================================================================== */
+
+/* ==================================
+    menu hero section Styling for [menu Page]   
+================================== */
+.menu-hero {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.menu-hero-title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-hero-subtitle {
+    font-size: 1.25rem;
+}
+
+/* ==================================
+    feature dishes section Styling for [menu Page]   
+================================== */
+.menu-featured {
+    background-color: #f8f9fa;
+}
+
+.menu-featured-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: right;
+}
+
+.menu-featured-subtitle {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 2rem;
+    text-align: right;
+}
+
+
+/* Tabs Navigation */
+.nav-tabs .nav-link {
+    color: #007bff;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0;
+    text-align: right;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #333;
+    text-align: right;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+    text-align: right;
+}
+
+.badge {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .menu-featured-title {
+        font-size: 1.75rem;
+    }
+    .menu-featured-subtitle {
+        font-size: 1.125rem;
+    }
+}
+
+
+/* ==================================
+    all menu items section Styling for [menu Page]   
+================================== */
+
+.all-menu-items {
+    position: relative;
+    padding: 5rem 0;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/menu.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.section-content {
+    position: relative;
+    z-index: 1;
+}
+
+.all-menu-items-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.all-menu-items-description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary {
+    background-color: #ff5722;
+    border-color: #ff5722;
+}
+
+.btn-primary:hover {
+    background-color: #e64a19;
+    border-color: #e64a19;
+}
+
+/* Chef's Recommendations Section */
+.chefs-recommendations {
+    background-color: #f8f9fa;
+}
+
+.chefs-recommendations-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.chefs-recommendations-subtitle {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+
+/* Card Styling */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: right;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #777;
+}
+
+.card-price {
+    font-size: 1.25rem;
+    color: #007bff;
+    margin-top: 0.5rem;
+}
+
+/* ===============================================================================
+
+                            contact page style
+                
+=============================================================================== */
+
+/* ==================================
+    contact hero section Styling for [contact Page]   
+================================== */
+.con-hero {
+    background-image: url('../images/contact.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    position: relative;
+    direction: rtl;
+}
+
+.con-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.con-hero .container {
+    z-index: 2;
+    position: relative;
+}
+
+.con-hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.con-hero-description {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.con-contact-form {
+    background-color: #ffffff;
+    padding: 40px 0;
+    direction: rtl;
+}
+
+.con-contact-form h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 45px;
+}
+
+.input-icon i {
+    font-size: 1.2rem;
+}
+
+.form-control {
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ced4da;
+    box-shadow: none;
+    padding-right: 10px;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.con-contact-form button[type="submit"] {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.con-contact-form button[type="submit"]:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.con-contact-form button[type="submit"] .fa-paper-plane {
+    font-size: 1.2rem;
+}
+
+.con-contact-info {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    direction: rtl;
+}
+
+.con-contact-info h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.con-contact-info ul {
+    padding-left: 0;
+}
+
+.con-contact-info li {
+    font-size: 1rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.con-contact-info li:hover {
+    transform: translateX(-5px);
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    margin-right: 15px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.icon-box i {
+    font-size: 1.5rem;
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* ===============================================================================
+
+                            reviews page style
+                
+=============================================================================== */
+
+/* ==================================
+    reviews hero section Styling for [reviews Page]   
+================================== */
+.rev-hero {
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+    color: #fff;
+}
+
+.rev-hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.rev-hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+
+/* ==================================
+    reviews form section Styling for [reviews Page]   
+================================== */
+.rev-submission-form {
+    background-color: #f8f9fa;
+}
+
+.rev-form-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.rev-form-subtitle {
+    font-size: 1.125rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.input-group-text {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+}
+
+.input-group-text i {
+    font-size: 1.125rem;
+}
+
+.form-control,
+.form-select {
+    border-radius: 0.375rem;
+}
+
+.form-control {
+    padding-left: 2.5rem;
+}
+
+textarea.form-control {
+    padding-left: 2.5rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.rev-reviews {
+    background-color: #f8f9fa;
+}
+
+.rev-reviews-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.rev-reviews-subtitle {
+    font-size: 1.125rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.btn-group .btn {
+    margin: 0 0.5rem;
+}
+
+.review-item .card {
+    border: none;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.review-item .card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.review-rating i {
+    color: #f39c12;
+    margin-right: 0.1rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.card-text {
+    color: #555;
+}
+
+.card-date {
+    font-size: 0.875rem;
+    color: #888;
+    margin-top: 1rem;
+}
+
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+}
+
+.page-link {
+    color: #007bff;
+    background-color: transparent;
+    border: 1px solid #dee2e6;
+}
+
+.page-link:hover {
+    color: #0056b3;
+    text-decoration: none;
+    background-color: #e9ecef;
+}
+
+
+/* ==================================
+    reviews statistics section Styling for [reviews Page]   
+================================== */
+.rev-stats {
+    background-color: #ffffff;
+}
+
+.rev-stats-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.rev-stats-subtitle {
+    font-size: 1.125rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon i {
+    color: #007bff;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #666;
+}
+
+.rating-distribution {
+    width: 100%;
+}
+
+.rating-bar {
+    position: relative;
+    height: 1.5rem;
+    margin: 0.5rem 0;
+    color: #fff;
+    padding-left: 1rem;
+    line-height: 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.rating-bar span {
+    position: absolute;
+    left: 1rem;
+}
+
+
+/* ==================================
+            Footer Styling  
+================================== */
+
+.home-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.footer-top {
+    margin-bottom: 2rem;
+}
+
+.footer-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.footer-description {
+    font-size: 1.1rem;
+    color: #d3d3d3;
+    margin-bottom: 1.5rem;
+}
+
+.footer-contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact-info li {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 0.5rem;
+}
+
+.footer-contact-info li i {
+    color: #ffc107;
+    margin-right: 0.5rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    margin-bottom: 1rem;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.footer-nav li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+.footer-nav a {
+    color: #ddd;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    color: #ffc107;
+}
+
+.footer-social {
+    margin-bottom: 1.5rem;
+}
+
+.footer-social .social-icon {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social .social-icon:hover {
+    color: #ffc107;
+}
+
+.footer-copy {
+    font-size: 0.875rem;
+    color: #bbb;
+}

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <!-- Meta Tags for SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مرحبًا بكم في مطعمنا ، حيث نقدم أطباقًا لذيذة وطازجة. زورونا لتجربة تناول طعام لا تُنسى.">
+    <meta name="keywords" content="مطعم, طعام, أطباق, مأكولات, وجبات, طازجة, لذيذة">
+    <meta name="author" content="yasoo">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+    <!-- CSS Libraries from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- Pace.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <title>مطعم</title>
+</head>
+
+<body>
+    <!--  Loading screen -->
+    <div id="loading-screen">
+        <div class="corner-indicator"></div>
+    </div>
+    <main>
+        <!-- Header Section -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!-- Toggle Button for Mobile Menu -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل"> <span class="navbar-toggler-icon"></span> </button>
+                    <!-- Navbar Menu -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"> <a class="nav-link active" href="index.html"><i class="fa fa-home me-2"></i>الرئيسية</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="about.html"><i class="fa fa-info-circle me-2"></i>من نحن</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="reviews.html"><i class="fa fa-comments me-2"></i>الأراء</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="menu.html"><i class="fa fa-utensils me-2"></i>القائمة</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="reservation.html"><i class="fa fa-calendar-check me-2"></i>الحجز</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="contact.html"><i class="fa fa-envelope me-2"></i>اتصل بنا</a> </li>
+                        </ul>
+                        <!-- Header Buttons -->
+                        <div class="d-flex"> <a href="reservation.html" class="btn btn-primary me-2"><i class="fa fa-calendar-plus me-2"></i>احجز طاولة</a> <a class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#menuModal"><i class="fa fa-list me-2"></i>القائمة</a> </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Menu Modal -->
+            <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="menuModalLabel">قائمة الطعام</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">الطبق</th>
+                                            <th scope="col">الوصف</th>
+                                            <th scope="col">السعر</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>طبق 1</td>
+                                            <td>وصف طبق 1</td>
+                                            <td>$12.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>طبق 2</td>
+                                            <td>وصف طبق 2</td>
+                                            <td>$15.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>طبق 3</td>
+                                            <td>وصف طبق 3</td>
+                                            <td>$18.99</td>
+                                        </tr>
+                                        <!-- Add more rows as needed -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer"> <a href="tel:+123456789" class="btn btn-primary w-100">اطلب الآن</a>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Featured Dishes Section -->
+        <section class="menu-featured-dishes py-5">
+            <div class="container text-center">
+                <!-- Section Title -->
+                <h2 class="menu-featured-dishes-title">الأطباق المميزة</h2>
+                <p class="menu-featured-dishes-subtitle">اكتشف أطباق الشيف الخاصة، المعدة بأجود المكونات.</p>
+                <!-- Tabs Navigation -->
+                <ul class="nav nav-tabs justify-content-center mb-4" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation"> <a class="nav-link active" id="pills-breakfast-tab" data-bs-toggle="pill" href="#pills-breakfast" role="tab" aria-controls="pills-breakfast" aria-selected="true">إفطار</a> </li>
+                    <li class="nav-item" role="presentation"> <a class="nav-link" id="pills-lunch-tab" data-bs-toggle="pill" href="#pills-lunch" role="tab" aria-controls="pills-lunch" aria-selected="false">غداء</a> </li>
+                    <li class="nav-item" role="presentation"> <a class="nav-link" id="pills-dinner-tab" data-bs-toggle="pill" href="#pills-dinner" role="tab" aria-controls="pills-dinner" aria-selected="false">عشاء</a> </li>
+                </ul>
+                <!-- Tabs Content -->
+                <div class="tab-content" id="pills-tabContent">
+                    <!-- Breakfast Tab -->
+                    <div class="tab-pane fade show active" id="pills-breakfast" role="tabpanel" aria-labelledby="pills-breakfast-tab">
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card border-light shadow-sm"> <img src="assets/images/salmon.jpg" class="card-img-top" alt="طبق إفطار 1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">طبق إفطار 1</h5>
+                                        <p class="card-text">مزيج لذيذ من النكهات والقوام.</p>
+                                        <p class="badge bg-primary">$12.99</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card border-light shadow-sm"> <img src="assets/images/Greek-Salad.jpeg" class="card-img-top" alt="طبق إفطار 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">طبق إفطار 2</h5>
+                                        <p class="card-text">طازج ولذيذ مع لمسة من التوابل.</p>
+                                        <p class="badge bg-primary">$15.99</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card border-light shadow-sm"> <img src="assets/images/cheesecake.jpg" class="card-img-top" alt="طبق إفطار 3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">طبق إفطار 3</h5>
+                                        <p class="card-text">لذة تثير الشهية لجميع محبي الطعام.</p>
+                                        <p class="badge bg-primary">$18.99</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Lunch Tab -->
+                    <div class="tab-pane fade" id="pills-lunch" role="tabpanel" aria-labelledby="pills-lunch-tab">
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card border-light shadow-sm"> <img src="assets/images/Penne-Alfredo.jpeg" class="card-img-top" alt="طبق غداء 1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">طبق غداء 1</h5>
+                                        <p class="card-text">تذوق النكهات الغنية والمكونات عالية الجودة.</p>
+                                        <p class="badge bg-primary">$14.99</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card border-light shadow-sm"> <img src="assets/images/grill.jpg" class="card-img-top" alt="طبق غداء 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">طبق غداء 2</h5>
+                                        <p class="card-text">طبق فاخر يثير حاسة التذوق لديك.</p>
+                                        <p class="badge bg-primary">$16.99</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card border-light shadow-sm"> <img src="assets/images/shrimp.png" class="card-img-top" alt="طبق غداء 3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">طبق غداء 3</h5>
+                                        <p class="card-text">لذيذ ومشبع لجميع الأذواق.</p>
+                                        <p class="badge bg-primary">$13.99</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dinner Tab -->
+                    <div class="tab-pane fade" id="pills-dinner" role="tabpanel" aria-labelledby="pills-dinner-tab">
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card border-light shadow-sm"> <img src="assets/images/Spaghetti.jpg" class="card-img-top" alt="طبق عشاء 1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">طبق عشاء 1</h5>
+                                        <p class="card-text">طبق لذيذ مع مزيج فريد من النكهات.</p>
+                                        <p class="badge bg-primary">$17.99</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card border-light shadow-sm"> <img src="assets/images/Penne-Alfredo.jpeg" class="card-img-top" alt="طبق عشاء 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">طبق عشاء 2</h5>
+                                        <p class="card-text">مزيج مثير من النكهات والمكونات الطازجة.</p>
+                                        <p class="badge bg-primary">$19.99</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card border-light shadow-sm"> <img src="assets/images/chocolate.jpg" class="card-img-top" alt="طبق عشاء 3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">طبق عشاء 3</h5>
+                                        <p class="card-text">وجبة لذيذة لتختتم بها يومك.</p>
+                                        <p class="badge bg-primary">$21.99</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- All Menu Items Section -->
+        <section class="all-menu-items py-5">
+            <div class="container text-center">
+                <!-- Section Title and Description -->
+                <div class="section-content">
+                    <h2 class="all-menu-items-title">جميع عناصر القائمة</h2>
+                    <p class="all-menu-items-description">استعرض قائمتنا الكاملة التي تضم أفضل الأطباق المصنوعة من مكونات عالية الجودة.</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#menuModal">عرض القائمة</button>
+                </div>
+            </div>
+        </section>
+        <!-- Chef's Recommendations Section -->
+        <section class="chefs-recommendations py-5">
+            <div class="container">
+                <!-- Section Title -->
+                <div class="text-center mb-5">
+                    <h2 class="chefs-recommendations-title">توصيات الشيف</h2>
+                    <p class="chefs-recommendations-subtitle">استمتع باختيارات الشيف المميزة، المعدة بأجود المكونات.</p>
+                </div>
+                <!-- Recommendations Row -->
+                <div class="row">
+                    <!-- Recommendation Item 1 -->
+                    <div class="col-md-4">
+                        <div class="card"> <img src="assets/images/bbq.jpg" class="card-img-top" alt="طبق الشيف 1">
+                            <div class="card-body">
+                                <h5 class="card-title">طبق 1</h5>
+                                <p class="card-text">مزيج لذيذ من النكهات والقوام.</p>
+                                <p class="card-price">$19.99</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Recommendation Item 2 -->
+                    <div class="col-md-4">
+                        <div class="card"> <img src="assets/images/meal.jpeg" class="card-img-top" alt="طبق الشيف 2">
+                            <div class="card-body">
+                                <h5 class="card-title">طبق 2</h5>
+                                <p class="card-text">طبق شهي مع لمسة من التوابل.</p>
+                                <p class="card-price">$21.99</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Recommendation Item 3 -->
+                    <div class="col-md-4">
+                        <div class="card"> <img src="assets/images/meal2.jpeg" class="card-img-top" alt="طبق الشيف 3">
+                            <div class="card-body">
+                                <h5 class="card-title">طبق 3</h5>
+                                <p class="card-text">تحفة طهوية تُرضي جميع الأذواق.</p>
+                                <p class="card-price">$24.99</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Social Media Section -->
+        <section id="home-social-media" class="home-social-media">
+            <div class="container text-center">
+                <h2 class="home-title">تابعنا على وسائل التواصل الاجتماعي</h2>
+                <p class="home-subtitle">ابق على اطلاع بآخر التحديثات والعروض الخاصة</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook" aria-label="Facebook"> <i class="fab fa-facebook-f"></i> </a>
+                    <a href="#" class="social-icon twitter" aria-label="Twitter"> <i class="fab fa-twitter"></i> </a>
+                    <a href="#" class="social-icon instagram" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a>
+                    <a href="#" class="social-icon linkedin" aria-label="LinkedIn"> <i class="fab fa-linkedin-in"></i> </a>
+                    <a href="#" class="social-icon youtube" aria-label="YouTube"> <i class="fab fa-youtube"></i> </a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer Section -->
+        <footer id="home-footer" class="home-footer">
+            <div class="container text-center">
+                <div class="footer-top">
+                    <h2 class="footer-title">اتصل بنا</h2>
+                    <p class="footer-description">إذا كان لديك أي أسئلة أو استفسارات، لا تتردد في الاتصال بنا</p>
+                    <ul class="footer-contact-info">
+                        <li><i class="fas fa-phone-alt"></i> +123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@example.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, Anytown, USA</li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-logo"> <img src="assets/images/logo.png" alt="Restaurant Logo"> </div>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">الصفحة الرئيسية</a></li>
+                        <li><a href="menu.html">القائمة</a></li>
+                        <li><a href="about.html">عن المطعم</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon facebook" aria-label="Facebook"> <i class="fab fa-facebook-f"></i> </a>
+                        <a href="#" class="social-icon twitter" aria-label="Twitter"> <i class="fab fa-twitter"></i> </a>
+                        <a href="#" class="social-icon instagram" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a>
+                        <a href="#" class="social-icon linkedin" aria-label="LinkedIn"> <i class="fab fa-linkedin-in"></i> </a>
+                        <a href="#" class="social-icon youtube" aria-label="YouTube"> <i class="fab fa-youtube"></i> </a>
+                    </div>
+                    <p class="footer-copy">&copy; 2024 اسم المطعم. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <!-- JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Slick Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Pace.js Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

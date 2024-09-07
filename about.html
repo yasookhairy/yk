@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <!-- Meta Tags for SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مرحبًا بكم في مطعمنا ، حيث نقدم أطباقًا لذيذة وطازجة. زورونا لتجربة تناول طعام لا تُنسى.">
+    <meta name="keywords" content="مطعم, طعام, أطباق, مأكولات, وجبات, طازجة, لذيذة">
+    <meta name="author" content="yasoo">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+    <!-- CSS Libraries from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- Pace.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <title>مطعم</title>
+</head>
+
+<body>
+    <!--  Loading screen -->
+    <div id="loading-screen">
+        <div class="corner-indicator"></div>
+    </div>
+    <main>
+        <!-- Header Section -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!-- Toggle Button for Mobile Menu -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل"> <span class="navbar-toggler-icon"></span> </button>
+                    <!-- Navbar Menu -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"> <a class="nav-link active" href="index.html"><i class="fa fa-home me-2"></i>الرئيسية</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="about.html"><i class="fa fa-info-circle me-2"></i>من نحن</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="reviews.html"><i class="fa fa-comments me-2"></i>الأراء</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="menu.html"><i class="fa fa-utensils me-2"></i>القائمة</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="reservation.html"><i class="fa fa-calendar-check me-2"></i>الحجز</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="contact.html"><i class="fa fa-envelope me-2"></i>اتصل بنا</a> </li>
+                        </ul>
+                        <!-- Header Buttons -->
+                        <div class="d-flex"> <a href="reservation.html" class="btn btn-primary me-2"><i class="fa fa-calendar-plus me-2"></i>احجز طاولة</a> <a class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#menuModal"><i class="fa fa-list me-2"></i>القائمة</a> </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Menu Modal -->
+            <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="menuModalLabel">قائمة الطعام</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">الطبق</th>
+                                            <th scope="col">الوصف</th>
+                                            <th scope="col">السعر</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>طبق 1</td>
+                                            <td>وصف طبق 1</td>
+                                            <td>$12.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>طبق 2</td>
+                                            <td>وصف طبق 2</td>
+                                            <td>$15.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>طبق 3</td>
+                                            <td>وصف طبق 3</td>
+                                            <td>$18.99</td>
+                                        </tr>
+                                        <!-- Add more rows as needed -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer"> <a href="tel:+123456789" class="btn btn-primary w-100">اطلب الآن</a>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- hero  section [about page] -->
+        <section class="ab-hero py-5" data-aos="fade-up">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-lg-12 mb-4 py-3" style="background-color: rgba(0,0,0,.4);">
+                        <h2 class="ab-hero-title">اكتشف قصتنا</h2>
+                        <p class="ab-hero-text"> من بدايات متواضعة إلى تجربة طعام مشهورة، رحلتنا كانت مليئة بالشغف والتفاني وحب الطهي الفاخر. انضم إلينا ونحن نواصل خلق تحف طهي وذكريات لا تُنسى. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Our Story & Mission & Values Section -->
+        <section class="ab-story-mission py-5" data-aos="fade-up">
+            <div class="container">
+                <div class="row text-center">
+                    <!-- Our Story -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="ab-story-icon"> <i class="fa-solid fa-book fa-3x"></i> </div>
+                        <h2 class="ab-story-title">قصتنا</h2>
+                        <p class="ab-story-text"> بدأت رحلتنا بشغف بسيط لصنع تجارب طعام استثنائية. على مر السنين، تطورنا من مطبخ صغير إلى مؤسسة مشهورة، مكرسة لتقديم أطباق لذيذة ولحظات تناول طعام لا تُنسى. </p>
+                    </div>
+                    <!-- Our Mission & Values -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="ab-mission-icon"> <i class="fa-solid fa-bullseye fa-3x"></i> </div>
+                        <h2 class="ab-mission-title">مهمتنا وقيمنا</h2>
+                        <p class="ab-mission-text"> مهمتنا هي توفير تجربة تناول طعام لا تُنسى من خلال خدمة استثنائية ومأكولات عالية الجودة. نسعى لأن نكون وجهة الطعام المفضلة من خلال تقديم التميز في كل طبق. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Chef Team Section -->
+        <section class="ab-chef-team py-5" data-aos="fade-up">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="ab-chef-title">فريق الطهاة</h2>
+                    <p class="ab-chef-text"> تعرف على فريق الطهاة لدينا، الذين يكرسون جهدهم لإعداد أشهى الأطباق باستخدام المكونات الطازجة. كل واحد من طهاتنا يجلب شغفه وإبداعه إلى المطبخ ليقدم لك تجربة طعام استثنائية. </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="ab-chef-card"> <img src="assets/images/chef1.jpg" alt="Chef 1" class="ab-chef-img">
+                            <div class="ab-chef-info">
+                                <h3 class="ab-chef-name">أحمد سعيد</h3>
+                                <p class="ab-chef-role">رئيس الطهاة</p>
+                                <p class="ab-chef-description"> أحمد هو الشيف الرئيسي في مطعمنا، وهو مشهور بابتكاراته في عالم الطهي. يجلب معه أكثر من 15 عامًا من الخبرة في صناعة الطعام. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="ab-chef-card"> <img src="assets/images/chef2.png" alt="Chef 2" class="ab-chef-img">
+                            <div class="ab-chef-info">
+                                <h3 class="ab-chef-name">فاطمة علي</h3>
+                                <p class="ab-chef-role">شيف المعجنات</p>
+                                <p class="ab-chef-description"> فاطمة هي خبيرة في تحضير الحلويات والمعجنات، وتعتبر من بين الأفضل في هذا المجال. تميزها في صنع الحلويات لا يعلى عليه. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="ab-chef-card"> <img src="assets/images/chef3.jpg" alt="Chef 3" class="ab-chef-img">
+                            <div class="ab-chef-info">
+                                <h3 class="ab-chef-name">سامر حسين</h3>
+                                <p class="ab-chef-role">شيف المطبخ</p>
+                                <p class="ab-chef-description"> سامر هو الشيف المسؤول عن إعداد الأطباق الرئيسية في مطعمنا، ويشتهر بتقنياته الفريدة وأسلوبه الإبداعي في الطهي. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Call to Action Section -->
+        <section class="ab-call-to-action py-5 text-center">
+            <div class="container">
+                <h2 class="ab-call-to-action-title text-white">انضم إلينا الآن!</h2>
+                <p class="ab-call-to-action-text text-white">استمتع بتجربة تناول الطعام الممتاز معنا. اتصل بنا اليوم للحجز أو لمعرفة المزيد.</p> <a href="tel:+123456789" class="btn btn-light ab-call-to-action-btn">
+            اتصل الآن <i class="fa-solid fa-phone"></i>
+        </a> </div>
+        </section>
+        <!-- Social Media Section -->
+        <section id="home-social-media" class="home-social-media">
+            <div class="container text-center">
+                <h2 class="home-title">تابعنا على وسائل التواصل الاجتماعي</h2>
+                <p class="home-subtitle">ابق على اطلاع بآخر التحديثات والعروض الخاصة</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook" aria-label="Facebook"> <i class="fab fa-facebook-f"></i> </a>
+                    <a href="#" class="social-icon twitter" aria-label="Twitter"> <i class="fab fa-twitter"></i> </a>
+                    <a href="#" class="social-icon instagram" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a>
+                    <a href="#" class="social-icon linkedin" aria-label="LinkedIn"> <i class="fab fa-linkedin-in"></i> </a>
+                    <a href="#" class="social-icon youtube" aria-label="YouTube"> <i class="fab fa-youtube"></i> </a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer Section -->
+        <footer id="home-footer" class="home-footer">
+            <div class="container text-center">
+                <div class="footer-top">
+                    <h2 class="footer-title">اتصل بنا</h2>
+                    <p class="footer-description">إذا كان لديك أي أسئلة أو استفسارات، لا تتردد في الاتصال بنا</p>
+                    <ul class="footer-contact-info">
+                        <li><i class="fas fa-phone-alt"></i> +123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@example.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, Anytown, USA</li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-logo"> <img src="assets/images/logo.png" alt="Restaurant Logo"> </div>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">الصفحة الرئيسية</a></li>
+                        <li><a href="menu.html">القائمة</a></li>
+                        <li><a href="about.html">عن المطعم</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon facebook" aria-label="Facebook"> <i class="fab fa-facebook-f"></i> </a>
+                        <a href="#" class="social-icon twitter" aria-label="Twitter"> <i class="fab fa-twitter"></i> </a>
+                        <a href="#" class="social-icon instagram" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a>
+                        <a href="#" class="social-icon linkedin" aria-label="LinkedIn"> <i class="fab fa-linkedin-in"></i> </a>
+                        <a href="#" class="social-icon youtube" aria-label="YouTube"> <i class="fab fa-youtube"></i> </a>
+                    </div>
+                    <p class="footer-copy">&copy; 2024 اسم المطعم. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <!-- JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Slick Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Pace.js Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

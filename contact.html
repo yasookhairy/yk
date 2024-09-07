@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <!-- Meta Tags for SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مرحبًا بكم في مطعمنا ، حيث نقدم أطباقًا لذيذة وطازجة. زورونا لتجربة تناول طعام لا تُنسى.">
+    <meta name="keywords" content="مطعم, طعام, أطباق, مأكولات, وجبات, طازجة, لذيذة">
+    <meta name="author" content="yasoo">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+    <!-- CSS Libraries from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- Pace.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <title>مطعم</title>
+</head>
+
+<body>
+    <!-- Loading screen -->
+    <div id="loading-screen">
+        <div class="corner-indicator"></div>
+    </div>
+    <main>
+        <!-- Header Section -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!-- Toggle Button for Mobile Menu -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل"> <span class="navbar-toggler-icon"></span> </button>
+                    <!-- Navbar Menu -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"> <a class="nav-link active" href="index.html"><i class="fa fa-home me-2"></i>الرئيسية</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="about.html"><i class="fa fa-info-circle me-2"></i>من نحن</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="reviews.html"><i class="fa fa-comments me-2"></i>الأراء</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="menu.html"><i class="fa fa-utensils me-2"></i>القائمة</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="reservation.html"><i class="fa fa-calendar-check me-2"></i>الحجز</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="contact.html"><i class="fa fa-envelope me-2"></i>اتصل بنا</a> </li>
+                        </ul>
+                        <!-- Header Buttons -->
+                        <div class="d-flex"> <a href="reservation.html" class="btn btn-primary me-2"><i class="fa fa-calendar-plus me-2"></i>احجز طاولة</a> <a class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#menuModal"><i class="fa fa-list me-2"></i>القائمة</a> </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Menu Modal -->
+            <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="menuModalLabel">قائمة الطعام</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">الطبق</th>
+                                            <th scope="col">الوصف</th>
+                                            <th scope="col">السعر</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>طبق 1</td>
+                                            <td>وصف طبق 1</td>
+                                            <td>$12.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>طبق 2</td>
+                                            <td>وصف طبق 2</td>
+                                            <td>$15.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>طبق 3</td>
+                                            <td>وصف طبق 3</td>
+                                            <td>$18.99</td>
+                                        </tr>
+                                        <!-- Add more rows as needed -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer"> <a href="tel:+123456789" class="btn btn-primary w-100">اطلب الآن</a>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="con-hero text-center d-flex align-items-center py-5">
+            <div class="container">
+                <h1 class="con-hero-title">اتصل بنا</h1>
+                <p class="con-hero-description">نحن نتطلع لسماعك! يرجى ملء النموذج أدناه أو التواصل معنا من خلال تفاصيل الاتصال المتوفرة.</p>
+            </div>
+        </section>
+        <section class="con-contact-form py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="text-center mb-4">تواصل معنا</h2>
+                        <form>
+                            <div class="form-group mb-3 position-relative">
+                                <label for="name">اسمك</label>
+                                <div class="input-group">
+                                    <div class="input-icon"> <i class="fa fa-user"></i> </div>
+                                    <input type="text" class="form-control pr-5" id="name" placeholder="أدخل اسمك"> </div>
+                            </div>
+                            <div class="form-group mb-3 position-relative">
+                                <label for="email">بريدك الإلكتروني</label>
+                                <div class="input-group">
+                                    <div class="input-icon"> <i class="fa fa-envelope"></i> </div>
+                                    <input type="email" class="form-control pr-5" id="email" placeholder="أدخل بريدك الإلكتروني"> </div>
+                            </div>
+                            <div class="form-group mb-3 position-relative">
+                                <label for="subject">الموضوع</label>
+                                <div class="input-group">
+                                    <div class="input-icon"> <i class="fa fa-tag"></i> </div>
+                                    <input type="text" class="form-control pr-5" id="subject" placeholder="أدخل الموضوع"> </div>
+                            </div>
+                            <div class="form-group mb-4 position-relative">
+                                <label for="message">رسالتك</label>
+                                <div class="input-group">
+                                    <div class="input-icon" style="align-self: stretch"> <i class="fa fa-comment-alt"></i> </div>
+                                    <textarea class="form-control pr-5" id="message" rows="5" placeholder="أدخل رسالتك"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block"> <i class="fa fa-paper-plane ml-2"></i> أرسل الرسالة </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="con-contact-info py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- معلومات الاتصال -->
+                    <div class="col-lg-6 mb-4">
+                        <h3 class="mb-4">معلومات الاتصال</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-4 d-flex align-items-center">
+                                <div class="icon-box bg-primary text-white mr-3"> <i class="fa fa-map-marker-alt"></i> </div>
+                                <div> <strong>العنوان:</strong>
+                                    <p class="mb-0">شارع الملك فيصل، مدينة الرياض، المملكة العربية السعودية</p>
+                                </div>
+                            </li>
+                            <li class="mb-4 d-flex align-items-center">
+                                <div class="icon-box bg-primary text-white mr-3"> <i class="fa fa-phone-alt"></i> </div>
+                                <div> <strong>رقم الهاتف:</strong>
+                                    <p class="mb-0">+966 123 456 789</p>
+                                </div>
+                            </li>
+                            <li class="mb-4 d-flex align-items-center">
+                                <div class="icon-box bg-primary text-white mr-3"> <i class="fa fa-envelope"></i> </div>
+                                <div> <strong>البريد الإلكتروني:</strong>
+                                    <p class="mb-0">info@company.com</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="icon-box bg-primary text-white mr-3"> <i class="fa fa-clock"></i> </div>
+                                <div> <strong>ساعات العمل:</strong>
+                                    <p class="mb-0">السبت - الخميس: 9 صباحًا - 5 مساءً</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- خريطة جوجل المدمجة -->
+                    <div class="col-lg-6">
+                        <h3 class="mb-4">موقعنا على الخريطة</h3>
+                        <div class="map-container shadow rounded">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.994080195884!2d46.67529581450638!3d24.713551984114263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f04a51934509f%3A0xb20e2c6db0d8d5bd!2sKing%20Faisal%20St%2C%20Riyadh%2012556%2C%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1629475091883!5m2!1sen!2ssa" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Social Media Section -->
+        <section id="home-social-media" class="home-social-media">
+            <div class="container text-center">
+                <h2 class="home-title">تابعنا على وسائل التواصل الاجتماعي</h2>
+                <p class="home-subtitle">ابق على اطلاع بآخر التحديثات والعروض الخاصة</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook" aria-label="Facebook"> <i class="fab fa-facebook-f"></i> </a>
+                    <a href="#" class="social-icon twitter" aria-label="Twitter"> <i class="fab fa-twitter"></i> </a>
+                    <a href="#" class="social-icon instagram" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a>
+                    <a href="#" class="social-icon linkedin" aria-label="LinkedIn"> <i class="fab fa-linkedin-in"></i> </a>
+                    <a href="#" class="social-icon youtube" aria-label="YouTube"> <i class="fab fa-youtube"></i> </a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer Section -->
+        <footer id="home-footer" class="home-footer">
+            <div class="container text-center">
+                <div class="footer-top">
+                    <h2 class="footer-title">اتصل بنا</h2>
+                    <p class="footer-description">إذا كان لديك أي أسئلة أو استفسارات، لا تتردد في الاتصال بنا</p>
+                    <ul class="footer-contact-info">
+                        <li><i class="fas fa-phone-alt"></i> +123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@example.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, Anytown, USA</li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-logo"> <img src="assets/images/logo.png" alt="Restaurant Logo"> </div>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">الصفحة الرئيسية</a></li>
+                        <li><a href="menu.html">القائمة</a></li>
+                        <li><a href="about.html">عن المطعم</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon facebook" aria-label="Facebook"> <i class="fab fa-facebook-f"></i> </a>
+                        <a href="#" class="social-icon twitter" aria-label="Twitter"> <i class="fab fa-twitter"></i> </a>
+                        <a href="#" class="social-icon instagram" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a>
+                        <a href="#" class="social-icon linkedin" aria-label="LinkedIn"> <i class="fab fa-linkedin-in"></i> </a>
+                        <a href="#" class="social-icon youtube" aria-label="YouTube"> <i class="fab fa-youtube"></i> </a>
+                    </div>
+                    <p class="footer-copy">&copy; 2024 اسم المطعم. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <!-- JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Slick Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Pace.js Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>
